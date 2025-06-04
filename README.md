@@ -38,6 +38,16 @@ yarn dev
 bun run dev
 ```
 
+## Docker
+
+Run the development server and PostgreSQL via docker-compose:
+```bash
+docker-compose up
+```
+
+Environment variables can be configured in a `.env` file (see `.env.example`).
+
+
 ## Production
 
 Build the application for production:
