@@ -46,6 +46,10 @@ docker-compose up
 ```
 
 Environment variables can be configured in a `.env` file (see `.env.example`).
+Prisma client generation runs automatically on install, but you can also run it manually:
+```bash
+npx prisma generate
+```
 
 
 ## Production
