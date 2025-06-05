@@ -45,6 +45,20 @@ Prisma client generation runs automatically on install, but you can also run it 
 npx prisma generate
 ```
 
+## Dockerized Postgres
+
+Start a local PostgreSQL instance with Docker Compose:
+
+```bash
+docker compose up -d db
+```
+
+After the database is running you can push the schema:
+
+```bash
+npx prisma db push
+```
+
 
 ## Production
 
