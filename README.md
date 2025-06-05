@@ -38,12 +38,6 @@ yarn dev
 bun run dev
 ```
 
-## Docker
-
-Run the development server and PostgreSQL via docker-compose:
-```bash
-docker-compose up
-```
 
 Environment variables can be configured in a `.env` file (see `.env.example`).
 Prisma client generation runs automatically on install, but you can also run it manually:
