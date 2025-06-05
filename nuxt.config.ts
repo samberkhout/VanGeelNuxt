@@ -5,26 +5,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-auth'],
   auth: {
     origin: process.env.AUTH_ORIGIN || 'http://localhost:3000',
+    baseURL: '/api/auth',
     enableGlobalAppMiddleware: true,
     session: {
-      strategy: 'database'
+      strategy: 'jwt'
     },
-    providers: [
-      {
-        provider: 'credentials',
-        type: 'credentials',
-        credentials: {
-          email: { label: 'Email', type: 'text' },
-          password: { label: 'Password', type: 'password' }
-        },
-        authorize: async (credentials: any) => {
-          // TODO replace with real validation
-          if (credentials.email && credentials.password) {
-            return { id: 1, email: credentials.email }
-          }
-          return null
-        }
-      }
-    ]
+    provider: {
+      type: 'authjs',
+      defaultProvider: 'credentials'
+    }
   }
 })
