@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && prisma generate"
+    "postinstall": "nuxt prepare && prisma generate",
+    "create:admin": "node scripts/create-admin.js"
   },
   "dependencies": {
     "nuxt": "^3.17.5",
@@ -16,7 +17,9 @@
     "@prisma/client": "^5.15.0",
     "zod": "^3.22.4",
     "@nuxtjs/tailwindcss": "^6.10.0",
-    "@sidebase/nuxt-auth": "^0.10.1"
+    "@sidebase/nuxt-auth": "^0.10.1",
+    "@auth/prisma-adapter": "^1.1.1",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "prisma": "^5.15.0"
